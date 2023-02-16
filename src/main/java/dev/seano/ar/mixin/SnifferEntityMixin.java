@@ -1,5 +1,6 @@
 package dev.seano.ar.mixin;
 
+import dev.seano.ar.ARMod;
 import dev.seano.ar.item.ARItems;
 import dev.seano.ar.util.WeightedRandomBag;
 import net.minecraft.class_8153;
@@ -29,9 +30,12 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
         if (this.getWorld()
                 .getEnabledFeatures()
                 .contains(FeatureFlags.UPDATE_1_20)) {
+            double roseChance = ARMod.getConfig().roseChance >= 1 ? 1 : ARMod.getConfig().roseChance * 100;
+            double vanillaChance = roseChance >= 1 ? 0 : 100 - roseChance;
+
             WeightedRandomBag<Item> itemWeightedRandomBag = new WeightedRandomBag<>();
-            itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, 90);
-            itemWeightedRandomBag.addEntry(ARItems.ROSE, 10);
+            itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, vanillaChance);
+            itemWeightedRandomBag.addEntry(ARItems.ROSE, roseChance);
             itemStack = new ItemStack(itemWeightedRandomBag.getRandom());
         }
         return itemStack;
