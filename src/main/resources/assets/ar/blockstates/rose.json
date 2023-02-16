@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "cgv:block/rose"
+      "model": "ar:block/rose"
     }
   }
 }

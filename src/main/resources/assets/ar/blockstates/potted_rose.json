@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "cgv:block/potted_rose"
+      "model": "ar:block/potted_rose"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cgv:block/rose"
+    "layer0": "ar:block/rose"
   }
 }

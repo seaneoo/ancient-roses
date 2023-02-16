@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "cgv:block/rose"
+    "cross": "ar:block/rose"
   }
 }
