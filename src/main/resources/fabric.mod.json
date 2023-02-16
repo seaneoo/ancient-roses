@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "ar",
+  "version": "${version}",
+  "name": "Ancient Roses",
+  "description": "Sniffers will dug up the ancient, and extinct, rose flower!",
+  "authors": [
+    "seano"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "",
+    "issues": ""
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/ar/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.seano.ar.CGVMod"
+    ],
+    "client": [
+      "dev.seano.ar.CGVModClient"
+    ],
+    "fabric-datagen": [
+      "dev.seano.ar.datagen.CGVDataGenerator"
+    ]
+  },
+  "mixins": [
+    "ar.mixins.json"
+  ],
+  "depends": {
+    "java": ">=17",
+    "minecraft": ">=1.19.4-alpha.23.7.a",
+    "fabricloader": ">=0.14.14",
+    "fabric-api": ">=0.74.1+1.19.4"
+  }
+}
