@@ -12,6 +12,4 @@ This mod re-adds the Rose flower from Minecraft 1.7.1 and before as well as givi
 
 ## Notice
 
-**To use this mod you _must_ enable the Update 1.20 experimental features in your world!**
-
-To learn how to do that, please visit: https://www.minecraft.net/en-us/article/testing-new-minecraft-features
+**To use this mod you _must_ enable the Update 1.20 experimental features in your world! To learn how to do that, please visit: https://www.minecraft.net/en-us/article/testing-new-minecraft-features**
