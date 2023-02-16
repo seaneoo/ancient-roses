@@ -31,8 +31,12 @@ public class CGVBlocks {
     }
 
     @SuppressWarnings("SameParameterValue")
-    private static Block register(String id, Block block) {
-        BLOCKS.put(CGVMod.identifier(id), block);
+    private static Block register(String path, Block block) {
+        return register(CGVMod.identifier(path), block);
+    }
+
+    private static Block register(Identifier identifier, Block block) {
+        BLOCKS.put(identifier, block);
         return block;
     }
 }
