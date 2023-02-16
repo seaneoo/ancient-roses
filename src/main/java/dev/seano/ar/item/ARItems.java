@@ -1,7 +1,7 @@
 package dev.seano.ar.item;
 
-import dev.seano.ar.CGVMod;
-import dev.seano.ar.block.CGVBlocks;
+import dev.seano.ar.ARMod;
+import dev.seano.ar.block.ARBlocks;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
@@ -18,12 +18,12 @@ import java.util.HashMap;
 /**
  * @author Sean O'Connor
  */
-public class CGVItems {
+public class ARItems {
 
     private static final HashMap<Identifier, Item> ITEMS = new HashMap<>();
 
-    public static final Item ROSE = register(Registries.BLOCK.getId(CGVBlocks.ROSE)
-            .getPath(), new BlockItem(CGVBlocks.ROSE, new FabricItemSettings().requires(FeatureFlags.UPDATE_1_20)));
+    public static final Item ROSE = register(Registries.BLOCK.getId(ARBlocks.ROSE)
+            .getPath(), new BlockItem(ARBlocks.ROSE, new FabricItemSettings().requires(FeatureFlags.UPDATE_1_20)));
 
     @SuppressWarnings("UnstableApiUsage")
     public static void registerAll() {
@@ -34,7 +34,7 @@ public class CGVItems {
     }
 
     private static Item register(String path, Item item) {
-        return register(CGVMod.identifier(path), item);
+        return register(ARMod.identifier(path), item);
     }
 
     private static Item register(Identifier identifier, Item item) {

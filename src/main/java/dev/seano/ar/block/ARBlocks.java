@@ -1,6 +1,6 @@
 package dev.seano.ar.block;
 
-import dev.seano.ar.CGVMod;
+import dev.seano.ar.ARMod;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.Registries;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 /**
  * @author Sean O'Connor
  */
-public class CGVBlocks {
+public class ARBlocks {
 
     private static final HashMap<Identifier, Block> BLOCKS = new HashMap<>();
 
@@ -35,7 +35,7 @@ public class CGVBlocks {
 
     @SuppressWarnings("SameParameterValue")
     private static Block register(String path, Block block) {
-        return register(CGVMod.identifier(path), block);
+        return register(ARMod.identifier(path), block);
     }
 
     private static Block register(Identifier identifier, Block block) {

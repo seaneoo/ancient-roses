@@ -17,13 +17,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dev.seano.ar.CGVMod"
+      "dev.seano.ar.ARMod"
     ],
     "client": [
-      "dev.seano.ar.CGVModClient"
+      "dev.seano.ar.ARModClient"
     ],
     "fabric-datagen": [
-      "dev.seano.ar.datagen.CGVDataGenerator"
+      "dev.seano.ar.datagen.ARDataGenerator"
     ]
   },
   "mixins": [

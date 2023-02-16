@@ -1,6 +1,6 @@
 package dev.seano.ar.datagen;
 
-import dev.seano.ar.block.CGVBlocks;
+import dev.seano.ar.block.ARBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -17,7 +17,7 @@ public class ModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerFlowerPotPlant(CGVBlocks.ROSE, CGVBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ARBlocks.ROSE, ARBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

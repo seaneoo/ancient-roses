@@ -1,6 +1,6 @@
 package dev.seano.ar.mixin;
 
-import dev.seano.ar.item.CGVItems;
+import dev.seano.ar.item.ARItems;
 import dev.seano.ar.util.WeightedRandomBag;
 import net.minecraft.class_8153;
 import net.minecraft.entity.EntityType;
@@ -31,7 +31,7 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
                 .contains(FeatureFlags.UPDATE_1_20)) {
             WeightedRandomBag<Item> itemWeightedRandomBag = new WeightedRandomBag<>();
             itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, 90);
-            itemWeightedRandomBag.addEntry(CGVItems.ROSE, 10);
+            itemWeightedRandomBag.addEntry(ARItems.ROSE, 10);
             itemStack = new ItemStack(itemWeightedRandomBag.getRandom());
         }
         return itemStack;
