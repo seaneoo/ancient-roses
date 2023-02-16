@@ -10,12 +10,20 @@ import org.slf4j.LoggerFactory;
 public class ARMod implements ModInitializer {
     public static final String MOD_ID = "ar";
     public static final String MOD_NAME = "Ancient Roses";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
+
+    private static Logger logger;
 
     @Override
     public void onInitialize() {
         ARBlocks.registerAll();
         ARItems.registerAll();
+
+        logger = LoggerFactory.getLogger(MOD_NAME);
+    }
+
+    @SuppressWarnings("unused")
+    public static Logger getLogger() {
+        return logger;
     }
 
     public static Identifier identifier(String path) {
