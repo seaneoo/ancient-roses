@@ -1,3 +1,5 @@
+![](https://i.imgur.com/s31xTK7.png)
+
 [![Available on Modrinth](https://raw.githubusercontent.com/intergrav/devins-badges/68af3da1d56294934ece854c43dac9ab1b0eb3e9/assets/compact/available/modrinth_vector.svg)](https://modrinth.com/mod/ancient-roses) [![Available on CurseForge](https://raw.githubusercontent.com/intergrav/devins-badges/68af3da1d56294934ece854c43dac9ab1b0eb3e9/assets/compact/available/curseforge_vector.svg)](https://www.curseforge.com/minecraft/mc-mods/ancient-roses) [![Available on GitHub](https://raw.githubusercontent.com/intergrav/devins-badges/68af3da1d56294934ece854c43dac9ab1b0eb3e9/assets/compact/available/github_vector.svg)](https://github.com/seaneoo/ancient-roses/releases)
 <br/>
 [![Available for Fabric](https://raw.githubusercontent.com/intergrav/devins-badges/68af3da1d56294934ece854c43dac9ab1b0eb3e9/assets/compact/supported/fabric_vector.svg)](https://fabricmc.net/use/installer/) [![Requires Fabric API](https://raw.githubusercontent.com/intergrav/devins-badges/68af3da1d56294934ece854c43dac9ab1b0eb3e9/assets/compact/requires/fabric-api_vector.svg)](https://modrinth.com/mod/fabric-api)
