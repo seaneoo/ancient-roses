@@ -8,6 +8,7 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -23,13 +24,16 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
         super(entityType, world);
     }
 
-    @SuppressWarnings("ParameterCanBeLocal")
     @ModifyVariable(method = "method_49142", at = @At("STORE"), ordinal = 0)
     private ItemStack dig(ItemStack itemStack) {
-        WeightedRandomBag<Item> itemWeightedRandomBag = new WeightedRandomBag<>();
-        itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, 90);
-        itemWeightedRandomBag.addEntry(CGVItems.ROSE, 10);
-        itemStack = new ItemStack(itemWeightedRandomBag.getRandom());
+        if (this.getWorld()
+                .getEnabledFeatures()
+                .contains(FeatureFlags.UPDATE_1_20)) {
+            WeightedRandomBag<Item> itemWeightedRandomBag = new WeightedRandomBag<>();
+            itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, 90);
+            itemWeightedRandomBag.addEntry(CGVItems.ROSE, 10);
+            itemStack = new ItemStack(itemWeightedRandomBag.getRandom());
+        }
         return itemStack;
     }
 }

@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
@@ -21,7 +22,7 @@ public class CGVItems {
     private static final HashMap<Identifier, Item> ITEMS = new HashMap<>();
 
     public static final Item ROSE = register(Registries.BLOCK.getId(CGVBlocks.ROSE)
-            .getPath(), new BlockItem(CGVBlocks.ROSE, new FabricItemSettings()));
+            .getPath(), new BlockItem(CGVBlocks.ROSE, new FabricItemSettings().requires(FeatureFlags.UPDATE_1_20)));
 
     public static void registerAll() {
         ITEMS.forEach(((identifier, item) -> Registry.register(Registries.ITEM, identifier, item)));

@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -21,9 +22,11 @@ public class CGVBlocks {
             .noCollision()
             .breakInstantly()
             .sounds(BlockSoundGroup.GRASS)
+            .requires(FeatureFlags.UPDATE_1_20)
             .method_49229(AbstractBlock.OffsetType.XZ)));
     public static final Block POTTED_ROSE = register("potted_rose", new FlowerPotBlock(ROSE, AbstractBlock.Settings.of(Material.DECORATION)
             .breakInstantly()
+            .requires(FeatureFlags.UPDATE_1_20)
             .nonOpaque()));
 
     public static void registerAll() {
