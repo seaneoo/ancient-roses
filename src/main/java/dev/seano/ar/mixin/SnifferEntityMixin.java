@@ -31,7 +31,7 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
                 .getEnabledFeatures()
                 .contains(FeatureFlags.UPDATE_1_20)) {
             double roseChance = ARMod.getConfig().roseChance >= 1 ? 1 : ARMod.getConfig().roseChance * 100;
-            double vanillaChance = roseChance >= 1 ? 0 : 100 - roseChance;
+            double vanillaChance = roseChance >= 100 ? 0 : 100 - roseChance;
 
             WeightedRandomBag<Item> itemWeightedRandomBag = new WeightedRandomBag<>();
             itemWeightedRandomBag.addEntry(Items.TORCHFLOWER_SEEDS, vanillaChance);
