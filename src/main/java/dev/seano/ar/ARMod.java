@@ -14,6 +14,9 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Sean O'Connor
+ */
 public class ARMod implements ModInitializer {
     public static final String MOD_ID = "ar";
     public static final String MOD_NAME = "Ancient Roses";
