@@ -8,7 +8,7 @@ package dev.seano.ar;
 import dev.seano.ar.block.ARBlocks;
 import dev.seano.ar.item.ARItems;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -26,7 +26,7 @@ public class ARMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(ARConfig.class, GsonConfigSerializer::new);
+        AutoConfig.register(ARConfig.class, JanksonConfigSerializer::new);
 
         ARBlocks.registerAll();
         ARItems.registerAll();
