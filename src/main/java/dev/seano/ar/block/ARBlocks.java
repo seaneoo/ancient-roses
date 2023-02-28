@@ -28,7 +28,7 @@ public class ARBlocks {
             .breakInstantly()
             .sounds(BlockSoundGroup.GRASS)
             .requires(FeatureFlags.UPDATE_1_20)
-            .method_49229(AbstractBlock.OffsetType.XZ)));
+            .offset(AbstractBlock.OffsetType.XZ)));
     public static final Block POTTED_ROSE = register("potted_rose", new FlowerPotBlock(ROSE, AbstractBlock.Settings.of(Material.DECORATION)
             .breakInstantly()
             .requires(FeatureFlags.UPDATE_1_20)
