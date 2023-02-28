@@ -5,6 +5,7 @@
 
 package dev.seano.ar.mixin;
 
+import dev.seano.ar.ARMod;
 import dev.seano.ar.item.ARItems;
 import dev.seano.ar.util.RandomCollection;
 import net.minecraft.entity.EntityType;
@@ -34,6 +35,12 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
         /* Add items and their weights to the RandomCollection. */
         ITEMS.add(90, Items.TORCHFLOWER_SEEDS);
         ITEMS.add(10, ARItems.ROSE);
+
+        for (int i = 0; i < 10; i++) {
+            ARMod.getLogger()
+                    .info(ITEMS.next()
+                            .toString());
+        }
     }
 
     protected SnifferEntityMixin(EntityType<? extends AnimalEntity> entityType, World world) {
@@ -50,7 +57,7 @@ public abstract class SnifferEntityMixin extends AnimalEntity {
     @ModifyVariable(method = "dropSeeds", at = @At("STORE"), ordinal = 0)
     private ItemStack dropSeedsInject(ItemStack itemStack) {
         /* Ensure the current world has Update 1.20 experimental features enabled. */
-        if (this.getWorld()
+        if (this.method_48926()
                 .getEnabledFeatures()
                 .contains(FeatureFlags.UPDATE_1_20)) {
             /* Pick a new item to drop; modify the itemStack variable. */
